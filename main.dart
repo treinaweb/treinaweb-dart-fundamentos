@@ -1,15 +1,14 @@
+import 'dart:io';
+
 main() {
   const mensagem = "Meu primeiro script com Dart";
-  const int teste = 10;
-  int numero = 10;
-  double peso = 60.3;
-  bool vivo = true;
-  String mensagem2 = "Olá, mundo";
-  dynamic variavelDinamica = 15;
-  print(variavelDinamica);
-  variavelDinamica = "Mensagem";
-  print(variavelDinamica);
-  print(mensagem);
-  print(numero);
-  print(teste);
+  print("Digite o nome do contato: ");
+  var nome = stdin.readLineSync();
+  print("Digite a idade do contato: ");
+  int idade = int.parse(stdin.readLineSync());
+  print("Digite o email do contato: ");
+  String email = stdin.readLineSync();
+  print(nome);
+  print(idade);
+  print(email);
 }
