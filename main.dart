@@ -13,4 +13,5 @@ main() {
   // print("Sua idade é: $idade");
   // print("Seu email é:  $email");
   print("Seu nome é $nome. Sua idade é $idade. Seu email é $email");
+  print("Seu nome é ${nome.contains('M', 0)}");
 }
