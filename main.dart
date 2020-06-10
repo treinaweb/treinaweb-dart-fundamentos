@@ -1,5 +1,6 @@
 main() {
-  var mensagem = "Meu primeiro script com Dart";
+  const mensagem = "Meu primeiro script com Dart";
+  const int teste = 10;
   int numero = 10;
   double peso = 60.3;
   bool vivo = true;
@@ -10,4 +11,5 @@ main() {
   print(variavelDinamica);
   print(mensagem);
   print(numero);
+  print(teste);
 }
