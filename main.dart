@@ -8,7 +8,9 @@ main() {
   int idade = int.parse(stdin.readLineSync());
   print("Digite o email do contato: ");
   String email = stdin.readLineSync();
-  print(nome);
-  print(idade);
-  print(email);
+  // print("Seu nome é: $nome");
+  // print("Seu nome é: " + nome);
+  // print("Sua idade é: $idade");
+  // print("Seu email é:  $email");
+  print("Seu nome é $nome. Sua idade é $idade. Seu email é $email");
 }
