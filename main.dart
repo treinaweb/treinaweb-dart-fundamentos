@@ -13,5 +13,11 @@ main() {
   // print("Sua idade é: $idade");
   // print("Seu email é:  $email");
   print("Seu nome é $nome. Sua idade é $idade. Seu email é $email");
-  print("Seu nome é ${nome.contains('M', 0)}");
+  // print("Seu nome é ${nome.contains('M', 0)}");
+  if (idade >= 18) {
+    print("Você é maior de idade");
+    print("Você já pode ser preso");
+  } else {
+    print("Você é menor de idade");
+  }
 }
