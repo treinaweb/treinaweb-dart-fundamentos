@@ -14,10 +14,13 @@ main() {
   // print("Seu email é:  $email");
   print("Seu nome é $nome. Sua idade é $idade. Seu email é $email");
   // print("Seu nome é ${nome.contains('M', 0)}");
-  if (idade >= 18) {
-    print("Você é maior de idade");
-    print("Você já pode ser preso");
+  if (idade >= 1 && idade <= 10) {
+    print("Você é uma criança");
+  } else if (idade >= 11 && idade <= 17) {
+    print("Você é adolescente");
+  } else if (idade >= 18 && idade <= 59) {
+    print("Você é adulto");
   } else {
-    print("Você é menor de idade");
+    print("Você é idoso");
   }
 }
