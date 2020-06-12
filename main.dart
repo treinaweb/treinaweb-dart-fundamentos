@@ -8,6 +8,7 @@ main() {
   int idade = int.parse(stdin.readLineSync());
   print("Digite o email do contato: ");
   String email = stdin.readLineSync();
+  bool vivo = true;
   // print("Seu nome é: $nome");
   // print("Seu nome é: " + nome);
   // print("Sua idade é: $idade");
@@ -22,5 +23,31 @@ main() {
     print("Você é adulto");
   } else {
     print("Você é idoso");
+  }
+  // if (vivo == true) {
+  //   print("Você está vivo");
+  // } else {
+  //   print("Você está morto");
+  // }
+
+  switch (vivo) {
+    case true:
+      print("Você está vivo");
+      break;
+    case false:
+      print("Você está morto");
+      break;
+    default:
+  }
+
+  switch (idade) {
+    case 1:
+      print("Você tem 1 ano de idade");
+      break;
+    case 2:
+      print("Você tem 2 anos de idade");
+      break;
+    default:
+      print("Você não possui menos de 2 anos de idade");
   }
 }
