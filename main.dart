@@ -8,6 +8,10 @@ main() {
     var nome = stdin.readLineSync();
     print("Digite a idade do contato: ");
     int idade = int.parse(stdin.readLineSync());
+    if (idade == 5) {
+      print("Idade não pode ser 5 anos");
+      break;
+    }
     print("Digite o email do contato: ");
     String email = stdin.readLineSync();
     bool vivo = true;
@@ -57,6 +61,10 @@ main() {
     resposta = int.parse(stdin.readLineSync());
   } while (resposta == 1);
   for (var i = 0; i < 5; i++) {
+    if (i == 2) {
+      continue;
+    }
+    print(i);
     print("Olá");
   }
 }
