@@ -56,4 +56,7 @@ main() {
     print("1 - CADASTRO / 2 - SAIR");
     resposta = int.parse(stdin.readLineSync());
   } while (resposta == 1);
+  for (var i = 0; i < 5; i++) {
+    print("Olá");
+  }
 }
