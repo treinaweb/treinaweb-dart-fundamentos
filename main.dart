@@ -2,8 +2,8 @@ import 'dart:io';
 
 main() {
   const mensagem = "Meu primeiro script com Dart";
-  var resposta = 1;
-  while (resposta == 1) {
+  var resposta;
+  do {
     print("Digite o nome do contato: ");
     var nome = stdin.readLineSync();
     print("Digite a idade do contato: ");
@@ -55,5 +55,5 @@ main() {
     }
     print("1 - CADASTRO / 2 - SAIR");
     resposta = int.parse(stdin.readLineSync());
-  }
+  } while (resposta == 1);
 }
