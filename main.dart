@@ -10,7 +10,17 @@ main() {
     var nome = stdin.readLineSync();
     mapaContatos['nome'] = nome;
     print("Digite a idade do contato: ");
-    int idade = int.parse(stdin.readLineSync());
+    int idade;
+    try {
+      idade = int.parse(stdin.readLineSync());
+    } on FormatException {
+      print("O número digitado é inválido");
+      break;
+    } on Exception {
+      print("Erro no cadastro");
+    } finally {
+      print("Entrou no finally");
+    }
     mapaContatos['idade'] = idade;
     if (idade == 5) {
       print("Idade não pode ser 5 anos");
