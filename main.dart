@@ -4,17 +4,21 @@ main() {
   const mensagem = "Meu primeiro script com Dart";
   var resposta;
   var listaContatos = List();
+  var mapaContatos = Map();
   do {
     print("Digite o nome do contato: ");
     var nome = stdin.readLineSync();
+    mapaContatos['nome'] = nome;
     print("Digite a idade do contato: ");
     int idade = int.parse(stdin.readLineSync());
+    mapaContatos['idade'] = idade;
     if (idade == 5) {
       print("Idade não pode ser 5 anos");
       break;
     }
     print("Digite o email do contato: ");
     String email = stdin.readLineSync();
+    mapaContatos['email'] = email;
     bool vivo = true;
     var resumoCadastro =
         "O nome é: $nome. A idade é: $idade. O email é: $email. Seu status é: $vivo";
@@ -68,6 +72,8 @@ main() {
   for (var contato in listaContatos) {
     print(contato);
   }
+
+  print(mapaContatos['nome']);
 
   // for (var i = 0; i < listaContatos.length; i++) {
   //   print(listaContatos[i]);
