@@ -3,6 +3,7 @@ import 'dart:io';
 main() {
   const mensagem = "Meu primeiro script com Dart";
   var resposta;
+  var listaContatos = List();
   do {
     print("Digite o nome do contato: ");
     var nome = stdin.readLineSync();
@@ -15,6 +16,9 @@ main() {
     print("Digite o email do contato: ");
     String email = stdin.readLineSync();
     bool vivo = true;
+    var resumoCadastro =
+        "O nome é: $nome. A idade é: $idade. O email é: $email. Seu status é: $vivo";
+    listaContatos.add(resumoCadastro);
     // print("Seu nome é: $nome");
     // print("Seu nome é: " + nome);
     // print("Sua idade é: $idade");
@@ -60,11 +64,19 @@ main() {
     print("1 - CADASTRO / 2 - SAIR");
     resposta = int.parse(stdin.readLineSync());
   } while (resposta == 1);
-  for (var i = 0; i < 5; i++) {
-    if (i == 2) {
-      continue;
-    }
-    print(i);
-    print("Olá");
+
+  for (var contato in listaContatos) {
+    print(contato);
   }
+
+  // for (var i = 0; i < listaContatos.length; i++) {
+  //   print(listaContatos[i]);
+  // }
+  // for (var i = 0; i < 5; i++) {
+  //   if (i == 2) {
+  //     continue;
+  //   }
+  //   print(i);
+  //   print("Olá");
+  // }
 }
