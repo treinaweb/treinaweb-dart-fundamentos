@@ -5,6 +5,6 @@ void main(List<String> args) {
   print(resultado);
 }
 
-int soma(int n1, int n2) {
-  return n1 + n2;
+String soma(int n1, int n2) {
+  return (n1 + n2).toString();
 }
