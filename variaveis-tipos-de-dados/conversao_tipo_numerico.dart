@@ -1,14 +1,17 @@
 void main(List<String> args) {
   int moeda = 10;
-  double salario = 1.500;
+  double salario = 1500.00;
 
-  moeda.toString();
-  moeda.toDouble();
-  int.parse('10');
+  // moeda.toString();
+  // print(moeda.runtimeType);
+  // print(moeda.toString().runtimeType);
+  // moeda.toDouble();
+  // print(moeda.toDouble());
 
-  salario.toInt();
+  // print(int.parse('10').runtimeType);
+
   salario.toString();
-  double.parse('1.500');
 
-  print(double.parse('1.500').runtimeType);
+  print(salario.toInt());
+  print(double.parse("10.0"));
 }
