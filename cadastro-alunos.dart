@@ -3,37 +3,46 @@ import 'dart:io';
 List listaAlunos = [];
 
 void main(List<String> args) {
-  print('*** inscrição de novos alunos da escola ***');
-  print('deseja cadastrar novos alunos ?');
-  var resposta = stdin.readLineSync();
-
+  print('*** inscrição de alunos da escola ***');
+  print('insira os dados do primeiro aluno');
+  String cadastrarMaisUmAluno = 'sim';
   do {
-    switch (resposta) {
-      case 'sim':
-        print('escreva o nome do aluno');
-        final String nome = stdin.readLineSync()!;
-        print('escreva a idade do aluno');
-        int? idade;
-        try {
-          idade = int.parse(stdin.readLineSync()!);
-        } catch (e) {
-          idade = null;
-        }
-        cadastrarAluno(nome: nome, idade: idade);
-        print('já tem cadastrado os alunos:');
-        print(listaAlunos.map((e) => e['nome']));
-        print('deseja cadastrar mais alunos ?');
-        resposta = stdin.readLineSync();
-        break;
-      default:
-        resposta = 'sair';
-    }
-  } while (resposta != 'sair');
+    Map dadosAluno = obterDadosAluno();
+    cadastrarAluno(dadosAluno);
+    cadastrarMaisUmAluno = perguntarCdastrarMaisUmAluno();
+  } while (cadastrarMaisUmAluno == 'sim');
 
-  print('está cadastrado os alunos:');
-  print(listaAlunos.map((e) => e['nome']));
+  print('está cadastrado os alunos');
+  print(listaAlunos.map((dadoAluno) {
+    return dadoAluno['nome'];
+  }));
 }
 
-cadastrarAluno({required String nome, int? idade}) {
-  listaAlunos.add({'nome': nome, 'idade': idade});
+Map obterDadosAluno() {
+  print('escreva o nome do aluno');
+  final String nome = stdin.readLineSync()!;
+
+  print('escreva a idade do aluno');
+  int? idade;
+
+  try {
+    idade = int.parse(stdin.readLineSync()!);
+  } catch (e) {
+    idade = null;
+  }
+
+  return {'nome': nome, 'idade': idade};
+}
+
+cadastrarAluno(Map dadoAluno) {
+  listaAlunos.add(dadoAluno);
+}
+
+String perguntarCdastrarMaisUmAluno() {
+  String continuar;
+  do {
+    print('deseja cadastrar mais um aluno ? (sim/nao)');
+    continuar = stdin.readLineSync()!;
+  } while (continuar != 'sim' && continuar != 'nao');
+  return continuar;
 }
