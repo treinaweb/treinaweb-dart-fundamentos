@@ -1,8 +1,8 @@
-String? nome;
 void main(List<String> args) {
-  isEmpt(nome);
+  String? nome;
+  isEmpty(nome);
 }
 
-isEmpt(String? nome) {
+isEmpty(String? nome) {
   print(nome);
 }
