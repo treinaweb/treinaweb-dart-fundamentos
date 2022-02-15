@@ -1,25 +1,17 @@
-// if (false) {
-
-// }
-
-// else if(){}
-
 void main(List<String> args) {
   const nota = 10;
-
   const media = 5;
 
   if (nota < media) {
-    print('Não passou');
+    print('o aluno não foi aprovado');
   } else if (nota >= media && nota < 7) {
-    print('reprovado com chance de fazer novo exame ');
+    print('o aluno foi reprovado porem pode fazer uma nova prova');
   } else if (nota >= 7) {
-    print('passou');
+    print('aprovado');
+  } else {
+    print('a nota é inválida');
   }
 
-  if (nota < media) {
-    print('vá fazer novo exame');
-  } else if (nota < 9) {
-    print('você foi aprovado!');
-  }
+  print('final do código');
 }
+
